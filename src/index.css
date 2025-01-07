@@ -12,6 +12,9 @@ body{
 .nav{
   background-color: #313C52;
 }
+.hero{
+  background-color: #111827;
+}
 .list li:hover{
   color: #AAADB2;
   cursor: pointer;
@@ -22,10 +25,11 @@ body{
 
 .typewriter {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid #E94560; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
+  color: #E94560;
   animation: 
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
@@ -43,7 +47,7 @@ body{
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: #E94560; }
 }
 
 .animate__animated.animate__bounceInRight {
@@ -57,8 +61,8 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
 }
-.html-icon, .css-icon, .js-icon, .react-icon, .tailwind-icon, .bootstrap-icon, .mysql-icon, .php-icon, .vsc-icon, .git-hub-icon, .git-icon, .xampp-icon{
-  background-image: url("./assets/html5.svg");
+
+.skills{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -66,59 +70,15 @@ body{
   background-position:right center; 
   overflow: hidden; 
 }
-.html-icon:hover, .css-icon:hover, .js-icon:hover, .react-icon:hover, .tailwind-icon:hover, .bootstrap-icon:hover, .mysql-icon:hover, 
-.php-icon:hover,.vsc-icon:hover, .git-hub-icon:hover, .git-icon:hover, .xampp-icon:hover{
+.skills.hover{
   background-size: 40%;
   background-position: right;
   transition: 1s;
 }
-.css-icon{
-  background-image: url("./assets/CSS.svg");
- 
-}
-.js-icon, .bootstrap-icon{
-  background-image: url("./assets/javascript.svg");
-  
-}
-.react-icon{
-  background-image: url("./assets/react.svg");
- 
-}
-.tailwind-icon{
-  background-image: url("./assets/tailwind.svg");
-  
-}
-.bootstrap-icon{
-  background-image: url("./assets/bootstrap.svg");
- 
- 
-}
-.mysql-icon{
-  background-image: url("./assets/mysql.svg");
- 
-}
-.php-icon{
-  background-image: url("./assets/php.svg");
- 
-}
-.git-hub-icon{
-  background-image: url("./assets/github.svg");
-
-}
-.vsc-icon{
-  background-image: url("./assets/vsc.svg");
-
-}
-.git-icon{
-  background-image: url("./assets/git.svg");
-}
-.xampp-icon{
-  background-image: url("./assets/xampp.svg");
-}
 .container-tools{
-  max-width: 840px;
+  max-width: 950px;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
 }

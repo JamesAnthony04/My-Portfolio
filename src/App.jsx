@@ -2,6 +2,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Education from './components/Education';
+import Project from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -12,6 +13,7 @@ export default function App() {
     <Hero />
     <About />
     <Education />
+    <Project />
     <Contact />
     <Footer />
 

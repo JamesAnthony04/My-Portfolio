@@ -14,17 +14,17 @@ export default function About() {
       key={skill.id}
       className="relative bg-gray-800 border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
       items-center justify-center gap-2 min-h-[65px] overflow-hidden
-      transform transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-blue-500
-      hover:bg-gray-700 cursor-pointer"
+      transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
+      hover:bg-gray-700 cursor-pointer group"
     >
       <img
         src={skill.img.src}
         alt={skill.img.alt}
-        className="h-full w-full object-contain hover:object-cover z-10 opacity-80 hover:opacity-100
-        transition-all duration-300 hover:rotate-3"
+        className="h-full w-full object-contain z-10 opacity-80
+        transition-all duration-300 group-hover:rotate-6 group-hover:object-cover group-hover:opacity-100"
       />
       <p className="z-10 m-3 font-medium text-white 
-      transition-all duration-300 hover:text-blue-400">
+      transition-all duration-300 group-hover:text-blue-400">
         {skill.skillName}
       </p>
     </div>
@@ -33,19 +33,19 @@ export default function About() {
   const setOfTools = tools.map(tool => (
     <div
       key={tool.id}
-      className="bg-gray-800 border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
-      items-center min-h-[65px] overflow-hidden 
+      className="relative bg-gray-800 border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
+      items-center justify-center gap-2 min-h-[65px] overflow-hidden
       transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
-      hover:bg-gray-700 cursor-pointer "
+      hover:bg-gray-700 cursor-pointer group"
     >
       <img
         src={tool.img.src}
         alt={tool.img.alt}
-        className="h-full w-full object-contain hover:object-cover
-        transition-all duration-300 hover:rotate-3"
+              className="h-full w-full z-10 opacity-80
+        transition-all duration-300 group-hover:rotate-6 group-hover:object-cover group-hover:opacity-100"
       />
-      <p className=" absolute text-center m-3 font-medium text-white 
-      transition-all duration-300 hover:text-blue-400">
+      <p className=" m-3 font-medium text-white 
+      transition-all duration-300 group-hover:text-blue-400">
         {tool.toolName}
       </p>
     </div>

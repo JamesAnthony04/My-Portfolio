@@ -2,9 +2,10 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import Send from "../assets/send-icon.svg";
 import Contactlottie from "../assets/contact.lottie";
 import { motion } from "framer-motion";
+import HR from "./custom-hr";
 export default function Contact() {
   return (
-    <section className="bg-gray-900 text-white min-h-[100vh]  m-8">
+    <section className="bg-gray-900 text-white min-h-[7git0vh] m-8">
       <motion.div
         className="contact-container m-10 flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-2"
         initial={{ opacity: 0, y: 70 }}
@@ -23,9 +24,11 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <h1 className="mb-4 text-md font-bold">Contact</h1>
-            <hr className="horizontal-line" />
-            <h1 className="text-gray-200 font-bold text-2xl p-2">
+            <div className="my-3 flex items-center justify-center gap-1"> 
+        <h1 className=" text-md font-bold">Contact</h1>
+        <HR />
+        </div>
+            <h1 className="text-gray-200 font-bold text-xl p-1">
               Get in Touch
             </h1>
             <p className="text-sm p-2">

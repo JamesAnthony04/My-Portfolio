@@ -6,6 +6,7 @@ import { Fragment } from "react";
 import Blob from "/blob.svg";
 import skills from "../skills"
 import tools from "../tools"
+import HR from "./custom-hr"
 
 export default function About() {
 
@@ -56,7 +57,7 @@ export default function About() {
 
     <section
       id="about-me"
-      className="about-me-section bg-gray-900 text-gray-100 py-10 px-5 min-h-[100vh]"
+      className="about-me-section bg-gray-900 text-gray-100 py-6 px-5 "
     >
       <motion.div
         className="flex flex-col md:flex-row items-center gap-10 m-5 md:m-10"
@@ -66,10 +67,10 @@ export default function About() {
         viewport={{ once: false, amount: 0.3 }}
       >
         <div className="bg-transparent border border-gray-700 text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
-          <h1 className="mb-4 text-md font-bold">
-            About
-            <span className="block w-full border-t border-gray-300 mt-2"></span>
-          </h1>
+        <div className="my-3 flex items-center justify-center gap-1"> 
+        <h1 className=" text-md font-bold">Education</h1>
+        <HR />
+        </div>
           <h2 className="text-xl md:text-2xl font-bold mb-4">Get to know me</h2>
           <p className="text-sm md:text-md mb-4">
             Hello! I&apos;m <strong>James Anthony</strong>, an aspiring
@@ -98,13 +99,16 @@ export default function About() {
       </motion.div>
 
       <motion.section
-        className="m-5 md:m-10"
+        className="m-5 md:m-10 min-h-[50vh]"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <h1>Skills</h1>
+        <div className="my-3 flex items-center justify-center gap-1"> 
+        <h1 className=" text-md font-bold">Skills</h1>
+        <HR />
+        </div>
         <TabGroup>
           <TabList>
             <Tab as={Fragment}>

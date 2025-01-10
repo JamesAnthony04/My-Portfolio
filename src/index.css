@@ -8,6 +8,7 @@ body{
   font-family: "Poppins", serif;
   font-weight: 400;
   font-style: normal;
+  color: #AAADB2;
 }
 .nav{
   background-color: #313C52;
@@ -81,4 +82,9 @@ body{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 2rem;
+}
+.myHR{
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(47, 1, 216, 0.75), rgba(0, 0, 0, 0));
 }

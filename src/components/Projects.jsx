@@ -1,12 +1,21 @@
 import enroll from "../assets/enroll-sys.png";
 import dish from "../assets/dish-dash.png";
+import HR from "./custom-hr"
+import { motion } from "framer-motion";
 export default function Projects() {
   return (
     <section className="m-3 md:m-10 text-xs">
-      <div className="m-8">
+      <motion.div className="m-8"
+         initial={{ opacity: 0, y: 70 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5 }}
+         viewport={{ once: false, amount: 0.3 }}
+         >
         <div className="text-gray-200">
-          <h1 className="mb-2 text-lg font-bold">My Projects</h1>
-          <hr />
+        <div className="my-3 flex items-center justify-center gap-1"> 
+        <h1 className=" text-lg font-bold">Project</h1>
+        <HR />
+        </div>
           <h1 className="mt-2 text-xl font-bold">See my works</h1>
           <p className="text-sm m-1">
             A collection of web development projects demonstrating various
@@ -14,7 +23,12 @@ export default function Projects() {
             showcasing practical applications
           </p>
         </div>
-        <div className="flex flex-col md:flex-row gap-2 md:gap-4">
+        <motion.div className="flex flex-col md:flex-row  gap-2 md:gap-4"
+               initial={{ opacity: 0, y: 70 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.9 }}
+               viewport={{ once: false, amount: 0.3 }}
+        >
 
         <div className="bg-transparent border border-gray-700 rounded-md max-w-96 p-4 my-8">
             <h1 className="my-2 font-bold text-sm">
@@ -97,8 +111,8 @@ export default function Projects() {
           </div>
 
           
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }

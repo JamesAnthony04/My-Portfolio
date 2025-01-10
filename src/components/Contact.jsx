@@ -4,7 +4,7 @@ import Contactlottie from "../assets/contact.lottie";
 import { motion } from "framer-motion";
 export default function Contact() {
   return (
-    <section className="bg-gray-900 text-white min-h-[100vh] p-5">
+    <section className="bg-gray-900 text-white min-h-[100vh]  m-8">
       <motion.div
         className="contact-container m-10 flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-2"
         initial={{ opacity: 0, y: 70 }}
@@ -13,7 +13,7 @@ export default function Contact() {
         viewport={{ once: false, amount: 0.3 }}
       >
         <div
-          className="border border-gray-700 bg-gray-800 text-gray-300 flex flex-col justify-center items-center gap-2 md:gap-5
+          className="border border-gray-700 bg-transparent text-gray-300 flex flex-col justify-center items-center gap-2 md:gap-5
         max-w-xs md:max-w-4xl p-4 sm:p-6 md:p-8 shadow rounded-md"
         >
           <motion.div

@@ -12,7 +12,7 @@ export default function About() {
   const setOfSkills = skills.map(skill => (
     <div
       key={skill.id}
-      className="relative bg-gray-800 border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
+      className="relative bg-transparent border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
       items-center justify-center gap-2 min-h-[65px] overflow-hidden
       transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
       hover:bg-gray-700 cursor-pointer group"
@@ -33,7 +33,7 @@ export default function About() {
   const setOfTools = tools.map(tool => (
     <div
       key={tool.id}
-      className="relative bg-gray-800 border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
+      className="relative bg-transparent border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
       items-center justify-center gap-2 min-h-[65px] overflow-hidden
       transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
       hover:bg-gray-700 cursor-pointer group"
@@ -65,7 +65,7 @@ export default function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="bg-gray-800 border border-gray-700 text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
+        <div className="bg-transparent border border-gray-700 text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
           <h1 className="mb-4 text-md font-bold">
             About
             <span className="block w-full border-t border-gray-300 mt-2"></span>
@@ -113,8 +113,8 @@ export default function About() {
                   className={clsx(
                     "py-2 px-4 rounded-tl-lg focus:outline-none transition",
                     selected
-                      ? "bg-blue-800 text-white"
-                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                      ? "bg-blue-800 border border-blue-800 text-white"
+                      : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
                   )}
                 >
                   Tech Stack
@@ -127,8 +127,8 @@ export default function About() {
                   className={clsx(
                     "py-2 px-4 rounded-tr-lg focus:outline-none transition",
                     selected
-                      ? "bg-blue-800 text-white"
-                      : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                      ? "bg-blue-800 border border-blue-800 text-white"
+                      : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
                   )}
                 >
                   Tools

@@ -1,6 +1,7 @@
 export default function Education(){
     return(
         <section className="p-10">
+            <div className="m-8">
             <h1 className="mb-5">Education</h1>
             <div>
             <ol className="items-center sm:flex">
@@ -71,6 +72,7 @@ export default function Education(){
 
             </div>
             <hr/>
+            </div>
         </section>
     )
 }

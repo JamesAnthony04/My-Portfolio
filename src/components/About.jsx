@@ -81,7 +81,7 @@ export default function About() {
   return (
     <section id="about" className="about-me-section py-6 px-5 ">
       <motion.div
-        className="flex flex-col md:flex-row items-center gap-10 m-5 md:m-10"
+        className="flex flex-col md:flex-col xl:flex-row items-center gap-10 m-5 md:m-10"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}

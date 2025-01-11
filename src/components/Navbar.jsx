@@ -1,10 +1,23 @@
 import SpeedDial from "./Navbar-sm";
-import Logo from "../assets/my-nav-logo.png"
 export default function Navbar() {
+
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      navbar.classList.remove("bg-transparent");
+      navbar.classList.add("bg-blue-800");
+    } else {
+      navbar.classList.remove("bg-blue-800");
+      navbar.classList.add("bg-transparent");
+    }
+  });
   return (
     <>
-      <header className="flex sticky top-0 z-50 md:mb-0">
-        <div className="nav flex justify-evenly items-center p-4 min-w-[100%]">
+      <header
+        className="flex sticky top-0 z-50 md:mb-0 bg-transparent transition-colors duration-300"
+        id="navbar"
+      >
+        <div className="nav relevant flex justify-evenly items-center p-4 min-w-[100%]">
           <a href="/">
             <h1 className="animate__animated animate__lightSpeedInLeft cursor-pointer">
               My Portfolio
@@ -26,11 +39,11 @@ export default function Navbar() {
               </a>
             </ul>
           </div>
+          <nav className="block md:hidden">
+            <SpeedDial />
+          </nav>
         </div>
       </header>
-      <nav className="block md:hidden">
-        <SpeedDial />
-      </nav>
     </>
   );
 }

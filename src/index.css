@@ -9,6 +9,7 @@ body{
   font-weight: 400;
   font-style: normal;
   color: #AAADB2;
+  overflow-x: hidden;
 }
 
 .my-image{
@@ -91,7 +92,6 @@ body{
 }
 
 .holo-proj-card {
-
   position: relative;
   overflow: hidden;
   border-radius: 5px;
@@ -188,4 +188,19 @@ body{
   background-repeat: no-repeat;
   background-position: 50%;
   background-size:60%;  
+}
+.contact-lottie{
+  background-image: url("blob.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size:60%;  
+}
+#navbar {
+  transition: background-color 0.3s ease;
+}
+.list li{
+  color: #fff;
+}
+.contact-container{
+  width: 100%;
 }

@@ -1,6 +1,5 @@
 import 'animate.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import Blob from "/blob.svg";
 import instagram from "../assets/instagram-icon.svg"
 import facebook from "../assets/facebook-icon.svg"
 import github from "../assets/github-icon.svg"
@@ -14,7 +13,7 @@ export default function Hero() {
   const yTransform = useTransform(scrollYProgress, [0.1, 0.3], [0, 100]);
 
   return (
-    <section className="hero flex flex-col md:flex-row justify-center items-center min-h-[70vh] md:gap-30 p-5 text-center md:text-justify">
+    <section className="hero flex flex-col md:flex-row justify-center items-center min-h-[100vh] md:gap-30 p-5 text-center md:text-justify">
       <motion.div className="m-2 p-2 animate__animated animate__bounceInLeft"
       style={{
         opacity,

@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section className=" min-h-[7git0vh] m-8" id="contact">
       <motion.div
-        className="contact-container m-10 flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-2"
+        className="contact-container flex flex-col-reverse md:flex-col-reverse xl:flex-row justify-center items-center gap-10 md:gap-20"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -15,7 +15,7 @@ export default function Contact() {
       >
         <div
           className="border border-gray-700 bg-transparent text-gray-300 flex flex-col justify-center items-center gap-2 md:gap-5
-        max-w-xs md:max-w-4xl p-4 sm:p-6 md:p-8 shadow rounded-md"
+         p-4 m-10 sm:p-6 md:p-8 shadow rounded-md"
         >
           <motion.div
             className=""
@@ -55,7 +55,6 @@ export default function Contact() {
                 placeholder="eg. James Anthony"
                 className="p-2 w-72 md:w-96  rounded-md text-gray-800 bg-gray-700 text-sm"
               ></input>
-
               <label htmlFor="email">Email:</label>
               <input
                 type="email"
@@ -103,9 +102,10 @@ export default function Contact() {
             </li>
           </ul>
         </div>
+
         <DotLottieReact
           src={Contactlottie}
-          className="h-70 md:h-2/4 w-96 md:w-3/4"
+          className="contact-lottie h-full w-full max-w-[45rem]"
           loop
           autoplay
         />

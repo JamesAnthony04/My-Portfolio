@@ -55,7 +55,7 @@ export default function Projects() {
           </p>
         </div>
         <motion.div
-          className="flex flex-col md:flex-row  gap-2 md:gap-4"
+          className="flex flex-col md:flex-col items-center xl:flex-row gap-2 md:gap-4"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

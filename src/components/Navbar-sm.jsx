@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Plus, Home, Book, Code, Contact, Info } from 'lucide-react';
 
 const SpeedDialAction = ({ icon: Icon, label, onClick }) => {
@@ -20,7 +19,6 @@ const SpeedDialAction = ({ icon: Icon, label, onClick }) => {
 
 const SpeedDial = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id)
@@ -39,7 +37,7 @@ const SpeedDial = () => {
   ];
 
   return (
-    <div className="fixed top-20 right-4 z-50">
+    <div className="">
       <div className="relative"> 
         {isOpen && (
           <div className="absolute top-12 right-10 flex flex-col items-center gap-1 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-lg">

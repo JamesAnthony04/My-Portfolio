@@ -5,7 +5,7 @@ import spc from "../assets/spc.jpg";
 import { motion } from "framer-motion";
 export default function Education() {
   return (
-    <section className="p-10">
+    <section className="p-10" id="education">
         
       <motion.div className="m-8 min-h-[50vh]"
               initial={{ opacity: 0, y: 70 }}
@@ -28,7 +28,7 @@ export default function Education() {
               <img
                 src={ncst}
                 alt="insta"
-                className="scale-125 transform transition-transform hover:scale-150"
+                className="scale-125 transform transition-transform hover:scale-150 cursor-pointer"
               />
             </span>
             <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-300 dark:text-white">
@@ -47,7 +47,7 @@ export default function Education() {
           </li>
           <li className="mb-10 ms-6">
             <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <img src={congre} alt="insta" className="scale-125" />
+              <img src={congre} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer" />
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-300 dark:text-white">
               Congressional Integrated High School - Senior High School
@@ -63,7 +63,7 @@ export default function Education() {
           </li>
           <li className="ms-6">
             <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <img src={spc} alt="insta" className="scale-125" />
+              <img src={spc} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer" />
             </span>
             <h3 className="mb-1 text-lg font-semibold text-gray-300 dark:text-white">
               San Pablo Colleges

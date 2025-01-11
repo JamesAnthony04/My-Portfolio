@@ -5,18 +5,17 @@ import instagram from "../assets/instagram-icon.svg"
 import facebook from "../assets/facebook-icon.svg"
 import github from "../assets/github-icon.svg"
 import linked from "../assets/linkedin-icon.svg"
+import Me from "../assets/me.png";
 
 export default function Hero() {
-  // Track scroll position
   const { scrollYProgress } = useScroll();
 
-  // Map scroll position to opacity and y position
-  const opacity = useTransform(scrollYProgress, [0.1, 0.3], [1, 0]); // Starts fading out after 10% of the scroll
-  const yTransform = useTransform(scrollYProgress, [0.1, 0.3], [0, 100]); // Moves down slightly as it fades
+  const opacity = useTransform(scrollYProgress, [0.1, 0.3], [1, 0]);
+  const yTransform = useTransform(scrollYProgress, [0.1, 0.3], [0, 100]);
 
   return (
-    <section className="hero text-white flex flex-col md:flex-row justify-center items-center h-lvh md:gap-40 p-5 text-center md:text-justify">
-      <motion.div className="m-5 p-5 animate__animated animate__bounceInLeft"
+    <section className="hero flex flex-col md:flex-row justify-center items-center min-h-[70vh] md:gap-30 p-5 text-center md:text-justify">
+      <motion.div className="m-2 p-2 animate__animated animate__bounceInLeft"
       style={{
         opacity,
         transform: yTransform,
@@ -39,7 +38,7 @@ export default function Hero() {
         </div>
       </motion.div>
       <motion.div
-        className="animate__animated animate__bounceInRight"
+        className="my-image animate__animated animate__bounceInRight max-w-[400px] md:max-w-[600px] max-h-[500px] md:max-h-[800px]"
         initial={{ opacity: 1, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -47,7 +46,7 @@ export default function Hero() {
           opacity,
           transform: yTransform,
         }}>
-        <img src={Blob} alt="blob" className="w-96 h-96" />
+        <img src={Me} alt="My-Image" className="w-full h-full" />
       </motion.div>
     </section>
   );

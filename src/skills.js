@@ -11,7 +11,7 @@ import phpIcon from "./assets/php.svg";
 const skills = [
   {
     id: 1,
-    skillName: "HTML 5",
+    skillName: "HTML",
     img: {
       src: htmlIcon,
       alt: "HTML Icon"

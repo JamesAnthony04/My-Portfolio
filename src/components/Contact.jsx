@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import HR from "./custom-hr";
 export default function Contact() {
   return (
-    <section className="bg-gray-900 text-white min-h-[7git0vh] m-8">
+    <section className=" min-h-[7git0vh] m-8" id="contact">
       <motion.div
         className="contact-container m-10 flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-2"
         initial={{ opacity: 0, y: 70 }}
@@ -24,10 +24,10 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div className="my-3 flex items-center justify-center gap-1"> 
-        <h1 className=" text-md font-bold">Contact</h1>
-        <HR />
-        </div>
+            <div className="my-3 flex items-center justify-center gap-1">
+              <h1 className=" text-md font-bold">Contact</h1>
+              <HR />
+            </div>
             <h1 className="text-gray-200 font-bold text-xl p-1">
               Get in Touch
             </h1>
@@ -84,6 +84,24 @@ export default function Contact() {
               </button>
             </motion.div>
           </form>
+          <ul className="text-xs m-4">
+            <li className="flex items-center gap-1 group cursor-default">
+              <span className="font-bold text-blue-700">Contact:</span>
+              <p className="group-hover:underline">+639949827718</p>
+            </li>
+            <li className="flex items-center gap-1 group cursor-default">
+              <span className="font-bold text-blue-700">Email:</span>{" "}
+              <p className="group-hover:underline">
+                guevarrajamesanthony@gmail.com
+              </p>
+            </li>
+            <li className="flex items-center gap-1 group cursor-default">
+              <span className="font-bold text-blue-700">Address:</span>{" "}
+              <p className="group-hover:underline">
+                Dasmarinas City, Cavite, Philippines
+              </p>
+            </li>
+          </ul>
         </div>
         <DotLottieReact
           src={Contactlottie}

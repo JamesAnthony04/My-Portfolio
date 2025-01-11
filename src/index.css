@@ -10,11 +10,11 @@ body{
   font-style: normal;
   color: #AAADB2;
 }
-.nav{
-  background-color: #313C52;
-}
-.hero{
-  background-color: #111827;
+
+.my-image{
+  background-image: url("/blob2.svg");
+  background-repeat: no-repeat;
+  background-position: start;
 }
 .list li:hover{
   color: #AAADB2;
@@ -56,35 +56,136 @@ body{
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
 }
-
-.skills{
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
-  background-size: 60% auto; 
-  background-position:right center; 
-  overflow: hidden; 
-}
-.skills.hover{
-  background-size: 40%;
-  background-position: right;
-  transition: 1s;
+.container img{
+  width: 50px;
 }
 .container-tools{
-  max-width: 950px;
+  max-width: 1000px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+
 }
 .myHR{
   border: 0;
   height: 1px;
   background-image: linear-gradient( rgba(0, 0, 0, 0), rgba(47, 1, 216, 0.75), rgba(0, 0, 0, 0));
+}
+.holo-proj-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.holo-proj-card {
+
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.holo-proj-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    20deg, 
+    transparent, 
+    transparent 60%, 
+    #1E3A8A
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.holo-proj-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px #1E3A8A;
+}
+
+.holo-proj-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+
+.holo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.holo-card {
+  width: 150px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #313C52;
+  border-color: #313C52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+}
+
+.holo-card h2 {
+  color: #1E3A8A;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.holo-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    20deg, 
+    transparent, 
+    transparent 60%, 
+    #1E3A8A
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holo-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #1E3A8A;
+}
+
+.holo-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+.about-lottie{
+  background-image: url("blob-yellow.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size:60%;  
 }

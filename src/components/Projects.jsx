@@ -1,116 +1,67 @@
-import enroll from "../assets/enroll-sys.png";
-import dish from "../assets/dish-dash.png";
-import HR from "./custom-hr"
+import HR from "./custom-hr";
 import { motion } from "framer-motion";
+import Button from "./project-button";
+import projects from "../projects";
 export default function Projects() {
+  const sortedProjects = projects.sort((a, b) => b.id - a.id);
+
+  const setOfProjects = projects.map((project) => (
+    <div
+      key={project.id}
+      className="holo-proj-card bg-transparent border border-gray-700 rounded-md max-w-[400px] p-4 cursor-pointer hover:shadow-lg hover:border-blue-500"
+    >
+      <h1 className="my-2 font-bold text-sm">{project.title}</h1>
+      <img src={project.img.src} alt={project.img.alt} />
+      <div className="w-full">
+        <p className="text-sm m-2">{project.desc}</p>
+      </div>
+      <br />
+      <div className=" ">
+        <p>Technologies:</p>
+        <ul className="tech-container flex flex-wrap items-center m-2 gap-1 md:gap-y-1">
+          {project.tech.map((technology, index) => (
+            <li
+              key={index}
+              className="inline-block p-1 m-1 bg-blue-900 hover:bg-blue-800 text-white rounded-sm transition-colors cursor-pointer text-[12z  px]"
+            >
+              {technology}
+            </li>
+          ))}
+        </ul>
+        <Button url={project.url} repo={project.repo} />
+      </div>
+    </div>
+  ));
+
   return (
-    <section className="m-3 md:m-10 text-xs">
-      <motion.div className="m-8"
-         initial={{ opacity: 0, y: 70 }}
-         whileInView={{ opacity: 1, y: 0 }}
-         transition={{ duration: 0.5 }}
-         viewport={{ once: false, amount: 0.3 }}
-         >
+    <section className="m-3 md:m-10 text-xs pb-20" id="project">
+      <motion.div
+        className="m-8"
+        initial={{ opacity: 0, y: 70 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <div className="text-gray-200">
-        <div className="my-3 flex items-center justify-center gap-1"> 
-        <h1 className=" text-lg font-bold">Project</h1>
-        <HR />
-        </div>
+          <div className="my-3 flex items-center justify-center gap-1">
+            <h1 className=" text-lg font-bold">Project</h1>
+            <HR />
+          </div>
           <h1 className="mt-2 text-xl font-bold">See my works</h1>
-          <p className="text-sm m-1">
+          <p className="text-sm m-1 mb-5">
             A collection of web development projects demonstrating various
-            designs, functionalities, and technologies I've worked with,
-            showcasing practical applications
+            designs, functionalities, and technologies I&apos;ve worked with,
+            showcasing practical applications.
           </p>
         </div>
-        <motion.div className="flex flex-col md:flex-row  gap-2 md:gap-4"
-               initial={{ opacity: 0, y: 70 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               transition={{ duration: 0.9 }}
-               viewport={{ once: false, amount: 0.3 }}
+        <motion.div
+          className="flex flex-col md:flex-row  gap-2 md:gap-4"
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: false, amount: 0.3 }}
         >
-
-        <div className="bg-transparent border border-gray-700 rounded-md max-w-96 p-4 my-8">
-            <h1 className="my-2 font-bold text-sm">
-              Dish Dash Recipe App with AI Integration
-            </h1>
-            <div className="max-h-[72%] min-h-[72%]">
-            <img src={dish} alt="Project Image" />
-            <div className="w-full">
-              <p className="text-sm m-2">
-                A smart recipe app that generates meal suggestions based on the
-                ingredients you have on hand. It simplifies cooking by helping
-                you make the most of your available resources.
-              </p>
-            </div>
-            </div>
-            <div>
-              <br />
-              <div className=" ">
-              <p>Technologies:</p>
-              <ul className="tech-container flex flex-wrap justify-evenly items-center m-2 gap-2 md:gap-y-1">
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  React JS
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  Vite
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  JavaScript
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  TailwindCSS
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  HTML
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  CSS
-                </li>
-              </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-transparent border border-gray-700 rounded-md max-w-96 p-4 my-8">
-            <h1 className="my-2 font-bold text-sm">
-                Enrollment Management System
-            </h1>
-            <img src={enroll} alt="Project Image" />
-            <div className="w-full">
-              <p className="text-sm m-2">
-                The system for managing enrollment for Sta. Cruz Elementary
-                School eases the scheduling, enrollment, and sections
-                management. Teachers monitor student list and grades,
-                administrators manage enrollment, sections, and schedules, and
-                students can readily access, re-enroll, and view sections,
-                grades, and schedules.
-              </p>
-            </div>
-            <div>
-              <br />
-              <p>Technologies:</p>
-              <ul className="tech-container flex flex-wrap justify-evenly items-center m-2 gap-2 md:gap-0">
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  HTML
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  CSS
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  JavaScript
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  PHP
-                </li>
-                <li className="bg-blue-900 rounded-sm text-center min-w-[4rem] max-w-[5rem] p-1">
-                  MySQL
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          
+          {setOfProjects}
         </motion.div>
       </motion.div>
     </section>

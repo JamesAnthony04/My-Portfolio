@@ -34,9 +34,9 @@ export default function Projects() {
   ));
 
   return (
-    <section className="m-3 md:m-10 text-xs pb-20" id="project">
+    <section className="text-xs py-6 px-10" id="project">
       <motion.div
-        className="m-8"
+        className=""
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -47,7 +47,7 @@ export default function Projects() {
             <h1 className=" text-lg font-bold">Project</h1>
             <HR />
           </div>
-          <h1 className="mt-2 text-xl font-bold">See my works</h1>
+          <h1 className="mt-2 text-2xl font-bold">See my <span className="text-blue-700">Works</span></h1>
           <p className="text-sm m-1 mb-5">
             A collection of web development projects demonstrating various
             designs, functionalities, and technologies I&apos;ve worked with,
@@ -55,7 +55,7 @@ export default function Projects() {
           </p>
         </div>
         <motion.div
-          className="flex flex-col md:flex-col items-center xl:flex-row gap-2 md:gap-4"
+          className="flex flex-col md:flex-col justify-center xl:flex-row gap-2 md:gap-4"
           initial={{ opacity: 0, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

@@ -81,18 +81,31 @@ export default function About() {
   return (
     <section id="about" className="about-me-section py-6 px-5 ">
       <motion.div
-        className="flex flex-col md:flex-col xl:flex-row items-center gap-10 m-5 md:m-10"
+        className="flex flex-row md:flex-col xl:flex-row items-center justify-center gap-10 m-5 md:m-10"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="bg-transparent border border-gray-700 text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
+        <div className="bg-transparent text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
           <div className="my-3 flex items-center justify-center gap-1">
             <h1 className=" text-md font-bold">About</h1>
             <HR />
           </div>
-          <h2 className="text-xl md:text-2xl font-bold mb-4">Get to know me</h2>
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            Get to <span className="text-blue-700">know</span> me
+          </h2>
+          <div className=" md:float-right">
+          <DotLottieReact
+            src={aboutlottie}
+            loop
+            autoplay
+            className="about-lottie h-full
+            w-full"
+          />
+          </div>
+          <div className="xl:max-w-[80%]">
+            
           <p className="text-sm md:text-md mb-4">
             Hello! I&apos;m <strong>James Anthony Guevarra</strong>, a 4th year
             college student taking Bachelors of Science in Information
@@ -100,34 +113,49 @@ export default function About() {
             (NCST), an aspiring front-end developer passionate about creating
             engaging and user-friendly web experiences.
           </p>
+
           <p className="text-sm md:text-md mb-4">
             I am particularly drawn to the intersection of design and
             functionality, where I can combine my creative instincts with my
-            technical skills to build beautiful, responsive websites.
+            technical skills to build beautiful, responsive websites. I found my
+            passion with web development when I was in 3rd year college during
+            our Web Development subject. I was amazed by how a simple code can
+            create a beautiful website. Since then, I started to learn more
+            about web development and started to build my own projects.
           </p>
+          <h2 className="text-xl md:text-xl font-bold mb-4">
+            My <span className="text-blue-600">Hobbies</span>
+          </h2>
           <p className="text-sm md:text-md mb-4">
-            I am particularly drawn to exploring a variety of hobbies that allow
-            me to express my creativity and enhance my skills. I enjoy creating
-            art that reflects my unique perspective. Additionally, I love
-            experimenting with cooking and trying new recipes, as it allows me
-            to combine flavors and techniques in exciting ways. Engaging in
-            these activities not only brings me joy but also helps me cultivate
-            a balanced and fulfilling life.
+            Outside of coding, I enjoy exploring a variety of hobbies that keep
+            me both creative and active. Cooking is one of my favorite ways to
+            unwind, as I love experimenting with flavors and creating meals that
+            bring people together. I also enjoy sketching, using it as a
+            relaxing outlet to capture ideas and moments through art. Alongside
+            these, fitness is an essential part of my routine—I follow a
+            Push-Pull-Legs workout split to stay active, build strength, and
+            maintain a healthy lifestyle. These hobbies help me stay inspired,
+            balanced, and ready to tackle new challenges.
           </p>
-          <p className="text-sm md:text-md mb-4">
-            Thank you for visiting my portfolio! I look forward to showcasing my
-            work and sharing my passion for front-end development.
-          </p>
+            <h2 className="text-xl md:text-xl font-bold mb-4">
+              My <span className="text-blue-600">Goal</span>
+            </h2>
+            <p className="text-sm md:text-md mb-4">
+              My ultimate goal is to become a highly skilled front-end
+              developer, contributing to innovative projects that positively
+              impact users’ lives. I aim to continuously learn and refine my
+              skills in modern technologies like React and Tailwind CSS while
+              building a professional portfolio that showcases my growth and
+              creativity. Beyond technical expertise, I aspire to create
+              meaningful user experiences that make the web more accessible and
+              enjoyable for everyone.
+            </p>
+            <p className="text-sm md:text-md mb-4">
+              Thank you for visiting my portfolio! I look forward to showcasing
+              my work and sharing my passion for front-end development.
+            </p>
+            </div>
         </div>
-        <motion.div
-          className="md:min-w-[50%] flex justify-center"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
-          <DotLottieReact src={aboutlottie} loop autoplay className="about-lottie w-full h-full min-w-[40rem]" />
-        </motion.div>
       </motion.div>
 
       <motion.section
@@ -138,7 +166,7 @@ export default function About() {
         viewport={{ once: false, amount: 0.3 }}
       >
         <div className="my-3 flex items-center justify-center gap-1">
-          <h1 className=" text-md font-bold">Skills</h1>
+          <h1 className="text-md font-bold">Skills</h1>
           <HR />
         </div>
         <TabGroup>
@@ -147,7 +175,7 @@ export default function About() {
               {({ selected }) => (
                 <button
                   className={clsx(
-                    "py-2 px-4 rounded-tl-lg focus:outline-none transition",
+                    "py-2 px-2 rounded-tl-lg focus:outline-none transition",
                     selected
                       ? "bg-blue-800 border border-blue-800 text-white"
                       : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
@@ -161,7 +189,7 @@ export default function About() {
               {({ selected }) => (
                 <button
                   className={clsx(
-                    "py-2 px-4 focus:outline-none transition",
+                    "py-2 px-2 focus:outline-none transition",
                     selected
                       ? "bg-blue-800 border border-blue-800 text-white"
                       : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
@@ -175,7 +203,7 @@ export default function About() {
               {({ selected }) => (
                 <button
                   className={clsx(
-                    "py-2 px-4 rounded-tr-lg focus:outline-none transition",
+                    "py-2 px-2 rounded-tr-lg focus:outline-none transition",
                     selected
                       ? "bg-blue-800 border border-blue-800 text-white"
                       : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"

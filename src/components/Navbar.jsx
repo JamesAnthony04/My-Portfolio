@@ -1,16 +1,28 @@
 import SpeedDial from "./Navbar-sm";
+import { useEffect } from "react";
 export default function Navbar() {
 
-  const navbar = document.getElementById("navbar");
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 10) {
-      navbar.classList.remove("bg-transparent");
-      navbar.classList.add("bg-blue-800");
-    } else {
-      navbar.classList.remove("bg-blue-800");
-      navbar.classList.add("bg-transparent");
-    }
-  });
+  useEffect(() => {
+    const navbar = document.getElementById("navbar");
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.remove("bg-transparent");
+        navbar.classList.add("bg-blue-800");
+      } else {
+        navbar.classList.remove("bg-blue-800");
+        navbar.classList.add("bg-transparent");
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <>
       <header

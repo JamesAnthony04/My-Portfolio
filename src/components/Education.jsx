@@ -5,7 +5,7 @@ import spc from "../assets/spc.jpg";
 import { motion } from "framer-motion";
 export default function Education() {
   return (
-    <section className="p-10" id="education">
+    <section className="py-6 px-5" id="education">
         
       <motion.div className="m-8 min-h-[50vh]"
               initial={{ opacity: 0, y: 70 }}
@@ -17,7 +17,7 @@ export default function Education() {
         <h1 className=" text-lg font-bold">Education</h1>
         <HR />
         </div>
-        <h3 className="text-xl font-bold my-5">See where I went</h3>
+        <h3 className="text-2xl font-bold my-5">See where I <span className="text-blue-700">Went</span></h3>
         <motion.ol className="relative border-s border-gray-200 dark:border-gray-700"
            initial={{ opacity: 0, y: 70 }}
            whileInView={{ opacity: 1, y: 0 }}

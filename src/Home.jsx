@@ -4,13 +4,15 @@ import Education from "./components/Education";
 import Project from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export default function Home() {
   return (
-    <main className="min-h-[100vh] min-w-[100vw]">
+    <main className="">
       <Navbar />
       <section id="home">
         <Hero />
+        <ParticlesBackground/>
       </section>
       <section id="about">
         <About />

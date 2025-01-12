@@ -6,7 +6,6 @@ import projectIcon from "../assets/project-icon.svg";
 import contactIcon from "../assets/contact-icon.svg";
 import myLogo from "../assets/myLogo.png";
 
-
 const Navbar = () => {
   useEffect(() => {
     const navbar = document.getElementById("navbar");
@@ -36,47 +35,28 @@ const Navbar = () => {
           <img
             src={myLogo}
             alt="Logo"
-            className="h-12 w-12 sm:h-14 sm:w-14 md:h-13 md:w-13 lg:h-16 lg:w-16 object-contain animate__animated animate__lightSpeedInLeft cursor-pointer transition-all duration-300"
+            className="h-12 w-12 sm:h-14 sm:w-14 md:h-13 md:w-13 lg:h-16 lg:w-16 object-contain cursor-pointer transition-all duration-300"
           />
         </a>
-        
+
         <div className="animate__animated animate__fadeIn">
           <ul className="flex items-center gap-8 lg:gap-20">
-            <a href="#about">
-              <li className="hidden md:block cursor-pointer hover:text-blue-400 transition-colors">
-                <div className="flex items-center gap-2">
-                  <img src={aboutIcon} alt="" className="w-4 h-4" />
-                  About
-                </div>
+            {[
+              { href: "#about", icon: aboutIcon, label: "About" },
+              { href: "#education", icon: educationIcon, label: "Education" },
+              { href: "#project", icon: projectIcon, label: "Project" },
+              { href: "#contact", icon: contactIcon, label: "Contact" },
+            ].map(({ href, icon, label }) => (
+              <li key={label} className="hidden md:block cursor-pointer hover:text-blue-400 transition-colors">
+                <a href={href} className="flex items-center gap-2">
+                  <img src={icon} alt={label} className="w-4 h-4" />
+                  {label}
+                </a>
               </li>
-            </a>
-            <a href="#education">
-              <li className="hidden md:block cursor-pointer hover:text-blue-400 transition-colors">
-                <div className="flex items-center gap-2">
-                  <img src={educationIcon} alt="" className="w-4 h-4" />
-                  Education
-                </div>
-              </li>
-            </a>
-            <a href="#project">
-              <li className="hidden md:block cursor-pointer hover:text-blue-400 transition-colors">
-                <div className="flex items-center gap-2">
-                  <img src={projectIcon} alt="" className="w-4 h-4" />
-                  Project
-                </div>
-              </li>
-            </a>
-            <a href="#contact">
-              <li className="hidden md:block cursor-pointer hover:text-blue-400 transition-colors">
-                <div className="flex items-center gap-2">
-                  <img src={contactIcon} alt="" className="w-4 h-4" />
-                  Contact
-                </div>
-              </li>
-            </a>
+            ))}
           </ul>
         </div>
-        
+
         <nav className="block md:hidden">
           <SpeedDial />
         </nav>

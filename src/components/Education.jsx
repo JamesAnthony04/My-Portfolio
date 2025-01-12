@@ -37,7 +37,7 @@ export default function Education() {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               September 2021 - Present
             </time>
-            <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">
               I am pursuing a Bachelor of Science in Information Technology
               (BSIT), where I am enhancing my skills in programming, web
               development, and system analysis. This program provides me with a
@@ -55,7 +55,7 @@ export default function Education() {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               August 2020 - June 2021
             </time>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
               I studied Computer Systems Servicing (CSS) in Grade 12, where I
               developed practical skills in hardware and software
               troubleshooting, networking, and system maintenance.
@@ -71,7 +71,7 @@ export default function Education() {
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               August 2019 - June 2020
             </time>
-            <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+            <p className="text-sm font-normal text-gray-500 dark:text-gray-400">
               I studied Information and Communication Technology (ICT) in Grade
               11, where I gained foundational knowledge in computer systems,
               programming, and digital communication. This experience sparked my

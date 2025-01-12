@@ -78,6 +78,7 @@ export default function About() {
       </p>
     </div>
   ));
+
   return (
     <section id="about" className="about-me-section py-6 px-5 ">
       <motion.div
@@ -87,7 +88,7 @@ export default function About() {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="bg-transparent text-gray-300 rounded-md shadow p-4 sm:p-6 md:p-8">
+        <div className="bg-transparent text-gray-300 rounded-md shadow">
           <div className="my-3 flex items-center justify-center gap-1">
             <h1 className=" text-md font-bold">About</h1>
             <HR />
@@ -95,7 +96,7 @@ export default function About() {
           <h2 className="text-xl md:text-2xl font-bold mb-4">
             Get to <span className="text-blue-700">know</span> me
           </h2>
-          <div className=" md:float-right">
+          <div className="max-w-[370px] lg:max-w-[700px] lg:w-[500px] md:w-[500px] md:float-right">
           <DotLottieReact
             src={aboutlottie}
             loop

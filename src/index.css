@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 10px; 
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E3A8A; 
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0f45d8; 
+  }
+}
+
 body{
   margin: 0;
   padding: 0;

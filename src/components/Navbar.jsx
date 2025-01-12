@@ -1,5 +1,11 @@
 import SpeedDial from "./Navbar-sm";
 import { useEffect } from "react";
+import aboutIcon from "../assets/about-icon.svg";
+import educationIcon from "../assets/education-icon.svg";
+import projectIcon from "../assets/project-icon.svg";
+import contactIcon from "../assets/contact-icon.svg";
+import myLogo from "../assets/myLogo.png";
+
 export default function Navbar() {
 
   useEffect(() => {
@@ -13,15 +19,11 @@ export default function Navbar() {
         navbar.classList.add("bg-transparent");
       }
     };
-
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []); // Empty dependency array ensures this runs only once on mount
+  }, []); 
 
   return (
     <>
@@ -29,25 +31,46 @@ export default function Navbar() {
         className="flex sticky top-0 z-50 md:mb-0 bg-transparent transition-colors duration-300"
         id="navbar"
       >
-        <div className="nav relevant flex justify-evenly items-center p-4 min-w-[100%]">
+        <div className="nav relevant flex justify-evenly items-center p-2 min-w-[100%] px-10">
           <a href="/">
             <h1 className="animate__animated animate__lightSpeedInLeft cursor-pointer">
-              My Portfolio
+              <img src={myLogo} alt="Logo" className="w-20 h-13" />
+              
             </h1>
           </a>
           <div className="animate__animated animate__fadeIn">
             <ul className="list flex items-center gap-20">
               <a href="#about">
-                <li className="hidden md:block cursor-pointer">About</li>
+                <li className="hidden md:block cursor-pointer">
+                  <div className="flex items-center gap-2">
+                    <img src={aboutIcon} alt="" className="w-4 h-4" />
+                    About
+                  </div>
+                </li>
               </a>
               <a href="#education">
-                <li className="hidden md:block cursor-pointer">Education</li>
+              <li className="hidden md:block cursor-pointer">
+                  <div className="flex items-center gap-2">
+                    <img src={educationIcon} alt="" className="w-4 h-4" />
+                    Education
+                  </div>
+                </li>
               </a>
               <a href="#project">
-                <li className="hidden md:block cursor-pointer">Project</li>
+              <li className="hidden md:block cursor-pointer">
+                  <div className="flex items-center gap-2">
+                    <img src={projectIcon} alt="" className="w-4 h-4" />
+                    Project
+                  </div>
+                </li>
               </a>
               <a href="#contact">
-                <li className="hidden md:block cursor-pointer">Contact</li>
+              <li className="hidden md:block cursor-pointer">
+                  <div className="flex items-center gap-2">
+                    <img src={contactIcon} alt="" className="w-4 h-4" />
+                    Contact
+                  </div>
+                </li>
               </a>
             </ul>
           </div>

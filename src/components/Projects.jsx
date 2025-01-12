@@ -35,32 +35,30 @@ export default function Projects() {
 
   return (
     <section className="text-xs py-6 px-10" id="project">
-      
       <motion.div
-        className=""
+        className="text-gray-200"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="text-gray-200">
-          <div className="my-3 flex items-center justify-center gap-1">
-            <h1 className=" text-lg font-bold">Project</h1>
-            <HR />
-          </div>
-          <h1 className="mt-2 text-2xl font-bold">See my <span className="text-blue-700">Works</span></h1>
-          <p className="text-sm m-1 mb-5">
-            A collection of web development projects demonstrating various
-            designs, functionalities, and technologies I&apos;ve worked with,
-            showcasing practical applications.
-          </p>
+        <div className="my-3 flex items-center justify-center gap-1">
+          <h1 className=" text-lg font-bold">Project</h1>
+          <HR />
         </div>
-
-        <div className="flex flex-col md:flex-col justify-center items-center xl:flex-row gap-2 md:gap-4">
-          {setOfProjects}
-        </div>
-
+        <h1 className="mt-2 text-2xl font-bold">
+          See my <span className="text-blue-700">Works</span>
+        </h1>
+        <p className="text-sm m-1 mb-5">
+          A collection of web development projects demonstrating various
+          designs, functionalities, and technologies I&apos;ve worked with,
+          showcasing practical applications.
+        </p>
       </motion.div>
+
+      <div className="flex flex-col md:flex-col justify-center items-center xl:flex-row gap-8 md:gap-4">
+        {setOfProjects}
+      </div>
     </section>
   );
 }

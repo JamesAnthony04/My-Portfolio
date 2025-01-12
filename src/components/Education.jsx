@@ -7,7 +7,7 @@ export default function Education() {
   return (
     <section className="py-6 px-5" id="education">
         
-      <motion.div className="m-8 min-h-[50vh]"
+      <motion.div className="m-8"
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

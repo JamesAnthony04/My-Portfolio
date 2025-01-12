@@ -35,11 +35,14 @@ const Hero = () => {
           <br />
           <div className="flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-2">
             <Socials />
+            <a href="https://drive.google.com/uc?export=download&id=1dtNiQYuJDUH9kLlo08hVU7P71ksak5qK" download="CV.pdf">
             <button className="bg-blue-900 hover:bg-blue-800 p-2 pl-3 rounded-md text-[12px] flex items-center">
-              Download CV
+              Download 
               <img src={download} alt="Download" className="w-5 h-5 ml-2" />
             </button>
+            </a>
           </div>
+          
         </motion.div>
 
         <motion.div

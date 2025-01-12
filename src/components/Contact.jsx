@@ -36,7 +36,7 @@ const Contact = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             <div className="space-y-2">
               <div className="my-3 flex gap-1">

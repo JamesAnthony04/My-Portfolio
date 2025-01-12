@@ -138,7 +138,7 @@ const Contact = () => {
                       <span className="font-bold text-blue-500">Contact:</span>
                       <p className="group-hover:underline">+639949827718</p>
                     </li>
-                    <li className="flex items-center text-sm gap-2 group">
+                    <li className="flex items-center  text-sm md:text-base gap-2 group">
                       <span className="font-bold text-blue-500">Email:</span>
                       <p className="group-hover:underline">
                         guevarrajamesanthony@gmail.com

@@ -8,7 +8,7 @@ export default function Projects() {
   const setOfProjects = projects.map((project) => (
     <div
       key={project.id}
-      className="holo-proj-card bg-transparent border border-gray-700 rounded-md max-w-[400px] min-h-[600px] p-4 cursor-pointer hover:shadow-lg hover:border-blue-500"
+      className="holo-proj-card bg-transparent border border-gray-700 rounded-md w-[280px] md:w-[400px] min-h-[600px] p-4 cursor-pointer hover:shadow-lg hover:border-blue-500"
     >
       <h1 className="my-2 font-bold text-sm">{project.title}</h1>
       <img src={project.img.src} alt={project.img.alt} />
@@ -40,7 +40,7 @@ export default function Projects() {
         className=""
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
         <div className="text-gray-200">
@@ -56,15 +56,9 @@ export default function Projects() {
           </p>
         </div>
 
-        <motion.div
-          className="flex flex-col md:flex-col justify-center items-center xl:items-baseline xl:flex-row gap-2 md:gap-4"
-          initial={{ opacity: 0, y: 70 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: false, amount: 0.3 }}
-        >
+        <div className="flex flex-col md:flex-col justify-center items-center xl:flex-row gap-2 md:gap-4">
           {setOfProjects}
-        </motion.div>
+        </div>
 
       </motion.div>
     </section>

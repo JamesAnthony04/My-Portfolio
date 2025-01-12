@@ -1,7 +1,7 @@
 import HR from './custom-hr'
 import ncst from "../assets/ncst-logo.png";
 import congre from "../assets/congre.png";
-import spc from "../assets/spc.jpg";
+import spc from "../assets/spc.png";
 import { motion } from "framer-motion";
 export default function Education() {
   return (

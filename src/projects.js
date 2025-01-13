@@ -56,7 +56,7 @@ const projects = [
                     "HTML",
                     "CSS",
                 ],
-                url: "http://",
+                url: "https://portfolio-delta-ochre-61.vercel.app/",
                 repo: "https://github.com/JamesAnthony04/My-Portfolio"
 
             },

@@ -40,7 +40,7 @@ const SpeedDial = () => {
     <div className="">
       <div className="relative"> 
         {isOpen && (
-          <div className="absolute top-12 right-10 flex flex-col items-center gap-1 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-lg">
+          <div className="absolute top-12 right-0 flex flex-col items-center gap-1 bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-lg">
             {actions.map((action, index) => (
               <SpeedDialAction
                 key={index}
@@ -55,10 +55,10 @@ const SpeedDial = () => {
         )}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-10 h-10 bg-gray-500 hover:bg-gray-700 rounded-full shadow-lg transition-all flex items-center justify-center"
+          className="w-10 h-10 bg-white hover:bg-gray-400 rounded-full shadow-lg transition-all flex items-center justify-center"
         >
           <Plus 
-            className={`h-5 w-5 text-white transition-transform duration-200 ${
+            className={`h-5 w-5 text-blue-900 transition-transform duration-200 ${
               isOpen ? 'rotate-45' : ''
             }`}
           />

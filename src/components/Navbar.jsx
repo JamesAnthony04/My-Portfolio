@@ -30,7 +30,7 @@ const Navbar = () => {
       className="flex sticky top-0 z-50 md:mb-0 bg-transparent transition-colors duration-300"
       id="navbar"
     >
-      <div className="flex justify-between items-center p-2 md:p-1 w-full px-10">
+      <div className="flex justify-between md:justify-evenly items-center p-2 md:p-1 w-full px-10">
         <a href="/" className="flex-shrink-0">
           <img
             src={myLogo}

@@ -6,11 +6,19 @@ import Contactlottie from "../assets/contact.lottie";
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
 import Socials from "./socials-account";
+import emailjs from '@emailjs/browser';
+import MessageModal from "./MessageModal";
+import ErrorMessageModal from "./ErrorMessageModal";
 const Contact = () => {
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [result, setResult] = useState('');
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    from_name: "",
+    from_email: "",
     message: "",
+    to_name: "James",
   });
 
   const handleChange = (e) => {
@@ -20,12 +28,28 @@ const Contact = () => {
       [name]: value,
     }));
   };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you would typically handle form submission
-    console.log("Form submitted:", formData);
+    setLoading(true);
+
+    try {
+      const response = await emailjs.send('service_25hat9k', 'template_irlyagd', formData, '_REgnnFFoxWASRIRD');
+      setResult(response.text);
+      setIsModalVisible(true); 
+      setFormData({ from_name: '', from_email: '', message: '' }); 
+    } catch (error) {
+      console.error('Error:', error);
+      setResult('error'); 
+      setIsModalVisible(true); 
+    } finally {
+      setLoading(false);
+    }
   };
+  const closeModal = () => {
+    setIsModalVisible(false);
+  }
+
+  
 
   return (
     <section className="min-h-screen bg-gray-900 text-gray-100" id="contact">
@@ -40,7 +64,7 @@ const Contact = () => {
           <div className="space-y-4">
             <div className="space-y-2">
               <div className="my-3 flex gap-1">
-                <h1 className=" text-md font-bold">Contact</h1>
+                <h1 className="text-md font-bold">Contact</h1>
                 <HR />
               </div>
               <h2 className="text-2xl font-bold">
@@ -53,8 +77,17 @@ const Contact = () => {
               </p>
             </div>
 
+            {isModalVisible && (
+              <div>
+                {result === "OK" ? (
+                  <MessageModal onClose={closeModal} />
+                ) : (
+                  <ErrorMessageModal onClose={closeModal} />
+                )}
+              </div>
+            )}
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-             
               <div className="bg-transparent border border-gray-700 p-6 rounded-lg shadow-xl order-2 md:order-1 lg:order-1">
                 <h3 className="text-xl font-bold mb-6">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -65,11 +98,12 @@ const Contact = () => {
                     <input
                       type="text"
                       id="name"
-                      name="name"
-                      value={formData.name}
+                      name="from_name"
+                      value={formData.from_name}
                       onChange={handleChange}
                       placeholder="eg. James Anthony"
                       className="w-full p-3 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
                     />
                   </div>
 
@@ -83,11 +117,12 @@ const Contact = () => {
                     <input
                       type="email"
                       id="email"
-                      name="email"
-                      value={formData.email}
+                      name="from_email"
+                      value={formData.from_email}
                       onChange={handleChange}
                       placeholder="eg. james.anthony@gmail.com"
                       className="w-full p-3 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none"
+                      required
                     />
                   </div>
 
@@ -106,22 +141,23 @@ const Contact = () => {
                       placeholder="Enter your message here"
                       rows="4"
                       className="w-full p-3 rounded-md bg-gray-700 text-gray-100 placeholder-gray-400 focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+                      required
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="bg-blue-900 hover:bg-blue-800 p-2 w-full rounded-md"
+                    disabled={loading}
+                    className="bg-blue-900 hover:bg-blue-800 p-2 w-full rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     <span className="flex justify-center items-center gap-2">
-                      Send Message
+                      {loading ? "Sending..." : "Send Message"}
                       <img src={Send} alt="Send" className="h-7 w-7" />
                     </span>
                   </button>
                 </form>
               </div>
 
- 
               <div className="bg-transparent border border-gray-700 p-6 rounded-lg shadow-xl order-1 md:order-1 lg:order-2">
                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
                 <div className="flex justify-center items-center">
@@ -138,7 +174,7 @@ const Contact = () => {
                       <span className="font-bold text-blue-500">Contact:</span>
                       <p className="group-hover:underline">+639949827718</p>
                     </li>
-                    <li className="flex items-center  text-sm md:text-base gap-2 group">
+                    <li className="flex items-center text-sm md:text-base gap-2 group">
                       <span className="font-bold text-blue-500">Email:</span>
                       <p className="group-hover:underline">
                         guevarrajamesanthony@gmail.com
@@ -152,11 +188,9 @@ const Contact = () => {
                     </li>
                   </ul>
                 </div>
-                  <div className="flex justify-center items-center gap-2">
-                    <Socials />
-                  </div>
-                      
-                
+                <div className="flex justify-center items-center gap-2">
+                  <Socials />
+                </div>
               </div>
             </div>
           </div>

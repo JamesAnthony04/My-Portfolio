@@ -46,7 +46,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="my-image animate__animated animate__bounceInRight max-w-[275px] md:max-w-[600px] max-h-[700px] md:max-h-[730px] overflow-hidden"
+          className="my-image animate__animated animate__bounceInRight max-w-[250px] md:max-w-[600px] max-h-[700px] md:max-h-[730px] overflow-hidden"
           initial={{ opacity: 1, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

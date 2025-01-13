@@ -88,7 +88,7 @@ const Contact = () => {
             )}
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-              <div className="bg-transparent border border-gray-700 p-6 rounded-lg shadow-xl order-2 md:order-1 lg:order-1">
+              <div className="bg-transparent border border-gray-700 p-6 rounded-lg shadow-xl order-2 md:order-1 lg:order-1 overflow-hidden object-fill">
                 <h3 className="text-xl font-bold mb-6">Send a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="space-y-2">

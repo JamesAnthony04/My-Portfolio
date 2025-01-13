@@ -10,7 +10,7 @@ import NotFound from './errors/Notfound';
 export default function App() {
   return (
     <Router>
-      <main className="min-h-[80vh]  bg-gray-900 text-white">
+      <main className="bg-gray-900 text-white">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

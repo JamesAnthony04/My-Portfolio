@@ -52,7 +52,7 @@ const Contact = () => {
   
 
   return (
-    <section className="min-h-screen bg-gray-900 text-gray-100" id="contact">
+    <section className=" bg-gray-900 text-gray-100" id="contact">
       <motion.div
         className="contact-container"
         initial={{ opacity: 0, y: 70 }}

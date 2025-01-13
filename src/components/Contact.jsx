@@ -170,17 +170,17 @@ const Contact = () => {
                 </div>
                 <div className="p-2 object-contain">
                   <ul className="space-y-3">
-                    <li className="flex items-center text-sm gap-2 group">
+                    <li className="flex items-center text-xs md:text-sm gap-2 group">
                       <span className="font-bold text-blue-500">Contact:</span>
                       <p className="group-hover:underline">+639949827718</p>
                     </li>
-                    <li className="flex items-center text-sm md:text-base gap-2 group">
+                    <li className="flex items-center text-xs md:text-sm gap-2 group">
                       <span className="font-bold text-blue-500">Email:</span>
                       <p className="group-hover:underline">
                         guevarrajamesanthony@gmail.com
                       </p>
                     </li>
-                    <li className="flex items-center text-sm gap-2 group">
+                    <li className="flex items-center text-xs md:text-sm gap-2 group">
                       <span className="font-bold text-blue-500">Address:</span>
                       <p className="group-hover:underline">
                         Dasmarinas City, Cavite, Philippines
@@ -188,6 +188,7 @@ const Contact = () => {
                     </li>
                   </ul>
                 </div>
+
                 <div className="flex justify-center items-center gap-2">
                   <Socials />
                 </div>

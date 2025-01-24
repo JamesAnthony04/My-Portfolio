@@ -218,17 +218,13 @@ export default function About() {
           <TabPanels>
             <TabPanel>
               <br />
-              <motion.div
+              <div
                 className="container"
-                initial={{ opacity: 0, y: 70 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: false, amount: 0.3 }}
               >
                 <div className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-[1200px] w-full mx-auto">
                 {setOfSkills}
                 </div>
-              </motion.div>
+              </div>
             </TabPanel>
 
             <TabPanel>

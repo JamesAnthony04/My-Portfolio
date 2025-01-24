@@ -37,7 +37,7 @@ export default function Projects() {
     <section className="text-xs py-6 px-5" id="project">
 
       <div className="m-8 flex flex-col justify-center items-center">
-      <div className="flex flex-col gap-2 px-20">
+      <div className="flex flex-col gap-2 px-20  max-w-[1370px]">
 
       <motion.div
         className="flex flex-col gap-2"

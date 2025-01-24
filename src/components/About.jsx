@@ -15,18 +15,18 @@ export default function About() {
     <div
       key={skill.id}
       className="relative bg-transparent border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
-      items-center justify-center gap-1 min-h-[65px] overflow-hidden
-      transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
+      items-center justify-center gap-1 min-h-[70px]  overflow-hidden
+      transform transition-all duration-300 hover:shadow-lg hover:border-blue-500 
       hover:bg-gray-700 cursor-pointer group"
     >
       <img
         src={skill.img.src}
         alt={skill.img.alt}
         className="h-full w-full object-contain z-10 opacity-80
-        transition-all duration-300 group-hover:rotate-6 group-hover:opacity-100"
+        transition-all duration-300 group-hover:rotate-6 group-hover:opacity-100 m-1"
       />
       <p
-        className="z-10 m-3 font-medium text-white text-[12px]
+        className="z-10 m-1 font-medium text-white text-[12px]
       transition-all duration-300 group-hover:text-blue-400"
       >
         {skill.skillName}
@@ -38,18 +38,18 @@ export default function About() {
     <div
       key={tool.id}
       className="relative bg-transparent border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
-      items-center justify-center gap-1 min-h-[65px] overflow-hidden
-      transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
+      items-center justify-center gap-1 min-h-[70px]  overflow-hidden
+      transform transition-all duration-300 hover:shadow-lg hover:border-blue-500 
       hover:bg-gray-700 cursor-pointer group"
     >
       <img
         src={tool.img.src}
         alt={tool.img.alt}
-        className="h-12 w-12 z-10 opacity-80
-        transition-all duration-300 group-hover:rotate-6 group-hover:object-cover group-hover:opacity-100"
+        className="h-full w-full object-contain z-10 opacity-80
+        transition-all duration-300 group-hover:rotate-6 group-hover:opacity-100 m-1"
       />
       <p
-        className=" m-3 font-medium text-white text-[12px]
+        className=" m-1 font-medium text-white text-[12px]
       transition-all duration-300 group-hover:text-blue-400"
       >
         {tool.toolName}
@@ -60,18 +60,18 @@ export default function About() {
     <div
       key={other.id}
       className="relative bg-transparent border border-gray-700 max-h-[2rem] rounded-lg w-full flex 
-      items-center justify-center gap-1 min-h-[65px] overflow-hidden
+      items-center justify-center gap-1 min-h-[70px]  overflow-hidden
       transform transition-all duration-300 hover:shadow-lg hover:border-blue-500
       hover:bg-gray-700 cursor-pointer group"
     >
       <img
         src={other.img.src}
         alt={other.img.alt}
-        className="h-11 w-11 z-10 opacity-80
-        transition-all duration-300 group-hover:rotate-6 group-hover:object-cover group-hover:opacity-100"
+        className="h-full w-full object-contain z-10 opacity-80
+        transition-all duration-300 group-hover:rotate-6 group-hover:opacity-100"
       />
       <p
-        className=" m-3 font-medium text-white text-[12px]
+        className=" m-1 font-medium text-white text-[10px]
       transition-all duration-300 group-hover:text-blue-400"
       >
         {other.title}
@@ -80,15 +80,15 @@ export default function About() {
   ));
 
   return (
-    <section id="about" className="about-me-section py-6 px-5 ">
+    <section id="about" className="about-me-section py-6 px-5 flex flex-col items-center">
       <motion.div
-        className="flex flex-row md:flex-col xl:flex-row items-center justify-center gap-10 m-5 md:m-10"
+        className=" flex flex-col gap-10 m-5 md:m-10"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="bg-transparent text-gray-300 rounded-md shadow">
+        <div className="bg-transparent text-gray-300 rounded-md shadow max-w-[1200px]">
           <div className="my-3 flex items-center justify-center gap-1">
             <h1 className=" text-md font-bold">About</h1>
             <HR />
@@ -96,13 +96,13 @@ export default function About() {
           <h2 className="text-xl md:text-2xl font-bold mb-4">
             Get to <span className="text-blue-700">know</span> me
           </h2>
-          <div className="max-w-[370px] lg:max-w-[700px] lg:w-[500px] md:w-[500px] md:float-right">
+          <div className="max-w-[370px] lg:max-w-[500px] lg:w-[500px] md:w-[500px] md:float-right m-4 p-4">
           <DotLottieReact
             src={aboutlottie}
             loop
             autoplay
             className="about-lottie h-full
-            w-full"
+            w-full object-contain"
           />
           </div>
           <div className="xl:max-w-[80%]">
@@ -157,64 +157,64 @@ export default function About() {
             </p>
             </div>
         </div>
-      </motion.div>
-
-      <motion.section
-        className="m-5 md:m-10"
+        <motion.section
+        className=""
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: false, amount: 0.3 }}
-      >
-        <div className="my-3 flex items-center justify-center gap-1">
-          <h1 className="text-md font-bold">Skills</h1>
-          <HR />
-        </div>
-        <TabGroup>
-          <TabList>
-            <Tab as={Fragment}>
-              {({ selected }) => (
-                <button
-                  className={clsx(
-                    "py-2 px-2 rounded-tl-lg focus:outline-none transition",
-                    selected
-                      ? "bg-blue-800 border border-blue-800 text-white"
-                      : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
-                  )}
-                >
-                  Tech Stack
-                </button>
+      >   
+    <TabGroup>
+      <div className="flex flex-col justify-start items-start gap-4">
+    <div className="flex flex-row justify-center items-center gap-1">
+      <h1 className="text-md font-bold">Skills</h1>
+      <HR />
+    </div>
+      <TabList>
+        <Tab as={Fragment}>
+          {({ selected }) => (
+            <button
+              className={clsx(
+                "py-2 px-2 rounded-tl-lg focus:outline-none transition",
+                selected
+                  ? "bg-blue-800 border border-blue-800 text-white"
+                  : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
               )}
-            </Tab>
-            <Tab as={Fragment}>
-              {({ selected }) => (
-                <button
-                  className={clsx(
-                    "py-2 px-2 focus:outline-none transition",
-                    selected
-                      ? "bg-blue-800 border border-blue-800 text-white"
-                      : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
-                  )}
-                >
-                  Tools
-                </button>
+            >
+              Tech Stack
+            </button>
+          )}
+        </Tab>
+        <Tab as={Fragment}>
+          {({ selected }) => (
+            <button
+              className={clsx(
+                "py-2 px-2 focus:outline-none transition",
+                selected
+                  ? "bg-blue-800 border border-blue-800 text-white"
+                  : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
               )}
-            </Tab>
-            <Tab as={Fragment}>
-              {({ selected }) => (
-                <button
-                  className={clsx(
-                    "py-2 px-2 rounded-tr-lg focus:outline-none transition",
-                    selected
-                      ? "bg-blue-800 border border-blue-800 text-white"
-                      : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
-                  )}
-                >
-                  Others
-                </button>
+            >
+              Tools
+            </button>
+          )}
+        </Tab>
+        <Tab as={Fragment}>
+          {({ selected }) => (
+            <button
+              className={clsx(
+                "py-2 px-2 rounded-tr-lg focus:outline-none transition",
+                selected
+                  ? "bg-blue-800 border border-blue-800 text-white"
+                  : "bg-transparent border border-gray-700 text-gray-300 hover:bg-gray-600"
               )}
-            </Tab>
-          </TabList>
+            >
+              Others
+            </button>
+          )}
+        </Tab>
+      </TabList>
+  
           <TabPanels>
             <TabPanel>
               <br />
@@ -225,38 +225,47 @@ export default function About() {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
+                <div className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-[1200px] w-full mx-auto">
                 {setOfSkills}
+                </div>
               </motion.div>
             </TabPanel>
 
             <TabPanel>
               <br />
               <motion.div
-                className="container-tools"
+                className="container"
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
+                <div className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-[1200px] w-full mx-auto">
                 {setOfTools}
+                </div>
               </motion.div>
             </TabPanel>
 
             <TabPanel>
               <br />
               <motion.div
-                className="container-others"
+                className="container"
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.3 }}
               >
+                <div 
+                className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-[1200px] w-full mx-auto">
                 {setOfOthers}
+                </div>
               </motion.div>
             </TabPanel>
           </TabPanels>
+          </div>
         </TabGroup>
       </motion.section>
+      </motion.div>
     </section>
   );
 }

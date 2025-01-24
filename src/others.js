@@ -1,8 +1,6 @@
 import computer from "./assets/computer-icon.svg"
 import troubleshooting from "./assets/troubleshooting-icon.svg"
-import painting from "./assets/painting-icon.svg"
-import cooking from "./assets/cooking-icon.svg"
-import sketching from "./assets/sketching-icon.svg"
+import networking from "./assets/networking-icon.svg"
 const others = [
     {
         id: 1,
@@ -17,6 +15,14 @@ const others = [
         title: "Basic Troubleshooting",
         img:{
             src: troubleshooting,
+            alt: "Skill"
+        }
+    },
+    {
+        id: 3,
+        title: "Networking",
+        img:{
+            src: networking,
             alt: "Skill"
         }
     },

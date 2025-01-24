@@ -77,37 +77,20 @@ body{
 }
 
 .container{
-  max-width: 1500px;
+  max-width: 1400px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
+  margin: 0 auto; 
+  justify-content: center; 
   justify-items: center;
-  align-items: center;
 }
+
 .container img{
-  width: 50px;
+  width: 30px;
 }
-.container-tools{
-  max-width: 1000px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
 
-}
-.container-others{
-  max-width: 500px;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-
-}
 .myHR{
   border: 0;
   height: 1px;

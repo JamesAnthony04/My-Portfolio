@@ -7,7 +7,6 @@ export default function Education() {
   return (
     <section className="py-6 px-5" id="education">
       <div className="m-8 flex flex-col justify-center items-center">
-
         <motion.ol className="relative flex flex-col justify-center md:px-20"
            initial={{ opacity: 0, y: 70 }}
            whileInView={{ opacity: 1, y: 0 }}

@@ -81,14 +81,14 @@ export default function About() {
 
   return (
     <section id="about" className="about-me-section py-6 px-5 flex flex-col items-center">
-      <motion.div
+      <div
         className=" flex flex-col gap-10 m-5 md:m-10"
-        initial={{ opacity: 0, y: 70 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="bg-transparent text-gray-300 rounded-md shadow max-w-[1200px]">
+        <motion.div className="bg-transparent text-gray-300 rounded-md shadow max-w-[1200px]"
+               initial={{ opacity: 0, y: 70 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.5 }}
+               viewport={{ once: false, amount: 0.3 }}>
           <div className="my-3 flex items-center justify-center gap-1">
             <h1 className=" text-md font-bold">About</h1>
             <HR />
@@ -156,7 +156,7 @@ export default function About() {
               my work and sharing my passion for front-end development.
             </p>
             </div>
-        </div>
+        </motion.div>
         <motion.section
         className=""
         initial={{ opacity: 0, y: 50 }}
@@ -229,17 +229,13 @@ export default function About() {
 
             <TabPanel>
               <br />
-              <motion.div
+              <div
                 className="container"
-                initial={{ opacity: 0, y: 70 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                viewport={{ once: false, amount: 0.3 }}
               >
                 <div className="container grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-[1200px] w-full mx-auto">
                 {setOfTools}
                 </div>
-              </motion.div>
+              </div>
             </TabPanel>
 
             <TabPanel>
@@ -261,7 +257,7 @@ export default function About() {
           </div>
         </TabGroup>
       </motion.section>
-      </motion.div>
+      </div>
     </section>
   );
 }

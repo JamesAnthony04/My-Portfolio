@@ -1,7 +1,7 @@
 import HR from "./custom-hr";
 import { motion } from "framer-motion";
 import Button from "./project-button";
-import projects from "../projects";
+import projects from "../data/projects";
 export default function Projects() {
   const sortedProjects = projects.sort((a, b) => b.id - a.id);
 

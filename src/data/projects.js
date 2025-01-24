@@ -1,6 +1,6 @@
-import enroll from "./assets/enroll-sys.png";
-import dish from "./assets/dish-dash.png";
-import portfolio from "./assets/my-portfolio.png";
+import enroll from "../assets/enroll-sys.png";
+import dish from "../assets/dish-dash.png";
+import portfolio from "../assets/my-portfolio.png";
 
 const projects = [
             {

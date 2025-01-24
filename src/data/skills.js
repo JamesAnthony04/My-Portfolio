@@ -1,12 +1,12 @@
 // Import all assets
-import htmlIcon from "./assets/html5.svg";
-import cssIcon from "./assets/CSS.svg";
-import jsIcon from "./assets/javascript.svg";
-import reactIcon from "./assets/react.svg";
-import tailwindIcon from "./assets/tailwind.svg";
-import bootstrapIcon from "./assets/bootstrap.svg";
-import mysqlIcon from "./assets/mysql.svg";
-import phpIcon from "./assets/php.svg";
+import htmlIcon from "../assets/html5.svg";
+import cssIcon from "../assets/CSS.svg";
+import jsIcon from "../assets/javascript.svg";
+import reactIcon from "../assets/react.svg";
+import tailwindIcon from "../assets/tailwind.svg";
+import bootstrapIcon from "../assets/bootstrap.svg";
+import mysqlIcon from "../assets/mysql.svg";
+import phpIcon from "../assets/php.svg";
 // Skills object
 const skills = [
   {

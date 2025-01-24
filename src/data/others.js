@@ -1,6 +1,6 @@
-import computer from "./assets/computer-icon.svg"
-import troubleshooting from "./assets/troubleshooting-icon.svg"
-import networking from "./assets/networking-icon.svg"
+import computer from "../assets/computer-icon.svg"
+import troubleshooting from "../assets/troubleshooting-icon.svg"
+import networking from "../assets/networking-icon.svg"
 const others = [
     {
         id: 1,

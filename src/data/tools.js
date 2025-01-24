@@ -1,7 +1,7 @@
-import githubIcon from "./assets/github.svg";
-import vscIcon from "./assets/vsc.svg";
-import xamppIcon from "./assets/xampp.svg";
-import gitIcon from "./assets/git.svg";
+import githubIcon from "../assets/github.svg";
+import vscIcon from "../assets/vsc.svg";
+import xamppIcon from "../assets/xampp.svg";
+import gitIcon from "../assets/git.svg";
 
 
 const tools = [

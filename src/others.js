@@ -20,29 +20,6 @@ const others = [
             alt: "Skill"
         }
     },
-    {
-        id: 3,
-        title: "Sketching & Drawing",
-        img:{
-            src: sketching,
-            alt: "Skill"
-        }
-    },
-    {
-        id: 4,
-        title: "Painting",
-        img:{
-            src: painting,
-            alt: "Skill"
-        }
-    },
-    {
-        id: 4,
-        title: "Cooking",
-        img:{
-            src: cooking,
-            alt: "Skill"
-        }
-    },
+    
 ]
 export default others;

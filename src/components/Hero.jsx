@@ -36,12 +36,12 @@ const Hero = () => {
  
           <div className="flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-2">
             <Socials />
-            <a href="https://drive.google.com/uc?export=download&id=1Eb28Ny0gEdAtTTMMEdVvzQusUMkFDePS" download="James_Guevarra_FrontEndDeveloper_Resume.pdf">
+            {/**<a href="https://drive.google.com/uc?export=download&id=1Eb28Ny0gEdAtTTMMEdVvzQusUMkFDePS" download="James_Guevarra_FrontEndDeveloper_Resume.pdf">
             <button className="bg-blue-900 hover:bg-blue-800 p-2 pl-3 rounded-md text-[12px] flex items-center">
               Download 
               <img src={download} alt="Download" className="w-5 h-5 ml-2" />
             </button>
-            </a>
+            </a>**/}
           </div>
           
         </motion.div>

@@ -98,6 +98,16 @@ body{
   align-items: center;
 
 }
+.container-others{
+  max-width: 500px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+
+}
 .myHR{
   border: 0;
   height: 1px;

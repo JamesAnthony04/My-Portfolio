@@ -245,7 +245,7 @@ export default function About() {
             <TabPanel>
               <br />
               <motion.div
-                className="container-tools"
+                className="container-others"
                 initial={{ opacity: 0, y: 70 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}

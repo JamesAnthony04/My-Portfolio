@@ -23,7 +23,7 @@ const projects = [
             },
             {
                 id: 2,
-                title: "Dish Dash Recipe App with AI Integration",
+                title: "Dish Dash Recipe App with API Integration",
                 img:{
                     src: dish,
                     alt: "Project Image"

@@ -46,7 +46,7 @@ export default function Projects() {
         transition={{ duration: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="gap-1">
+        <div className="flex justify-center items-center gap-1">
           <h1 className=" text-lg font-bold">Project</h1>
           <HR />
         </div>

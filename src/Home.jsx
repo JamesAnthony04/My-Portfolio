@@ -4,7 +4,7 @@ import Education from "./components/Education";
 import Project from "./components/Projects";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import ParticlesBackground from "./components/ParticlesBackground";
+
 
 export default function Home() {
   return (
@@ -12,7 +12,6 @@ export default function Home() {
       <Navbar />
       <section id="home">
         <Hero />
-        <ParticlesBackground/>
       </section>
       <section id="about">
         <About />

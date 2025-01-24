@@ -6,52 +6,51 @@ import { motion } from "framer-motion";
 export default function Education() {
   return (
     <section className="py-6 px-5" id="education">
-        
-      <motion.div className="m-8"
-              initial={{ opacity: 0, y: 70 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: false, amount: 0.3 }}
-              >
-        <div className="my-3 flex items-center justify-center gap-1"> 
-        <h1 className=" text-lg font-bold">Education</h1>
-        <HR />
-        </div>
-        <h3 className="text-2xl font-bold my-5">See where I <span className="text-blue-700">Went</span></h3>
-        <motion.ol className="relative border-s border-gray-200 dark:border-gray-700"
+      <div className="m-8 flex flex-col justify-center items-center">
+
+        <motion.ol className="relative flex flex-col justify-center md:px-20"
            initial={{ opacity: 0, y: 70 }}
            whileInView={{ opacity: 1, y: 0 }}
            transition={{ duration: 0.9 }}
            viewport={{ once: false, amount: 0.3 }}>
-          <li className="mb-10 ms-6">
-            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <img
-                src={ncst}
-                alt="insta"
-                className="scale-125 transform transition-transform hover:scale-150 cursor-pointer"
-              />
-            </span>
-            <h3 className="flex items-center mb-1 text-lg font-semibold text-gray-300 dark:text-white">
+
+        <div className='flex flex-col gap-2'>
+
+        <div className="my-3 flex items-center justify-center gap-1"> 
+        <h1 className=" text-lg font-bold">Education</h1>
+        <HR />
+        </div>
+
+        <h3 className="text-2xl font-bold my-5 ">See where I <span className="text-blue-700">Went</span></h3>
+        </div>
+
+        <div className="flex flex-col gap-2">
+
+          <li className="mb-10 border-gray-700 border rounded-md p-4 max-w-[1200px]">
+          <div className="flex items-center gap-2 pb-4">
+            <img src={ncst} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer w-8 h-8" />
+            <h3 className="mb-1 text-lg font-semibold text-gray-300 dark:text-white">
               National College of Science and Technology
             </h3>
+            </div>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               September 2021 - Present
             </time>
             <p className="mb-4 text-sm font-normal text-gray-500 dark:text-gray-400">
-              I am pursuing a Bachelor of Science in Information Technology
+              I am pursuing a Bachelors of Science in Information Technology
               (BSIT), where I am enhancing my skills in programming, web
               development, and system analysis. This program provides me with a
               solid foundation in technology and prepares me for a successful
               career in the IT industry.
             </p>
           </li>
-          <li className="mb-10 ms-6">
-            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <img src={congre} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer" />
-            </span>
+          <li className="mb-10 border-gray-700 border p-4 rounded-md max-w-[1200px]">
+          <div className="flex items-center gap-2 pb-4">
+            <img src={congre} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer w-8 h-8" />
             <h3 className="mb-1 text-lg font-semibold text-gray-300 dark:text-white">
-              Congressional Integrated High School - Senior High School
+              Congressional Integrated High School
             </h3>
+            </div>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               August 2020 - June 2021
             </time>
@@ -61,13 +60,13 @@ export default function Education() {
               troubleshooting, networking, and system maintenance.
             </p>
           </li>
-          <li className="ms-6">
-            <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <img src={spc} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer" />
-            </span>
+          <li className=" border-gray-700 border p-4 rounded-md max-w-[1200px]">
+            <div className="flex items-center gap-2 pb-4">
+            <img src={spc} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer w-8 h-8" />
             <h3 className="mb-1 text-lg font-semibold text-gray-300 dark:text-white">
               San Pablo Colleges
             </h3>
+            </div>
             <time className="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
               August 2019 - June 2020
             </time>
@@ -78,8 +77,9 @@ export default function Education() {
               interest in technology.
             </p>
           </li>
+          </div>
         </motion.ol>
-      </motion.div>
+      </div>
     </section>
   );
 }

@@ -34,18 +34,23 @@ export default function Projects() {
   ));
 
   return (
-    <section className="text-xs py-6 px-10" id="project">
+    <section className="text-xs py-6 px-5" id="project">
+
+      <div className="m-8 flex flex-col justify-center items-center">
+      <div className="flex flex-col gap-2 px-20">
+
       <motion.div
-        className="text-gray-200"
+        className="flex flex-col gap-2"
         initial={{ opacity: 0, y: 70 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="my-3 flex items-center justify-center gap-1">
+        <div className="gap-1">
           <h1 className=" text-lg font-bold">Project</h1>
           <HR />
         </div>
+
         <h1 className="mt-2 text-2xl font-bold">
           See my <span className="text-blue-700">Works</span>
         </h1>
@@ -58,6 +63,8 @@ export default function Projects() {
 
       <div className="flex flex-col md:flex-col justify-center items-center xl:flex-row gap-8 md:gap-4">
         {setOfProjects}
+      </div>
+      </div>
       </div>
     </section>
   );

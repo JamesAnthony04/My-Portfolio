@@ -12,14 +12,13 @@ export default function App() {
     <Router>
       <main className="bg-gray-900 text-white">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<><Home /><Footer /></>} />
+          <Route path="/about" element={<><About /><Footer /></>} />
+          <Route path="/education" element={<><Education /><Footer /></>} />
+          <Route path="/project" element={<><Project /><Footer /></>} />
+          <Route path="/contact" element={<><Contact /><Footer /></>} />
+          <Route path="*" element={<NotFound />} />  
         </Routes>
-        <Footer />
       </main>
     </Router>
   );

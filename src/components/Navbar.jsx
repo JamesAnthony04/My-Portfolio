@@ -27,16 +27,12 @@ const Navbar = () => {
 
   return (
     <header
-      className="flex sticky top-0 z-50 md:mb-0 bg-transparent transition-colors duration-300"
+      className="flex sticky top-0 z-50 md:mb-0 bg-transparent transition-colors duration-300 p-2"
       id="navbar"
     >
       <div className="flex justify-between md:justify-evenly items-center p-2 md:p-1 w-full px-10">
         <a href="/" className="flex-shrink-0">
-          <img
-            src={myLogo}
-            alt="Logo"
-            className="h-12 w-12 sm:h-14 sm:w-14 md:h-13 md:w-13 lg:h-16 lg:w-16 object-contain cursor-pointer transition-all duration-300"
-          />
+          <img src={myLogo} alt="My Logo" className="w-14 h-12" />
         </a>
 
         <div className="animate__animated animate__fadeIn">

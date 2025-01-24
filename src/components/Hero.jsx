@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import Me from "../assets/me.png";
 import download from "../assets/download-icon.svg";
 import Socials from "./socials-account";
+import backgroundImage from "../assets/background.png";
+
 
 const Hero = () => {
   const { scrollYProgress } = useScroll();
@@ -10,9 +12,8 @@ const Hero = () => {
   const yTransform = useTransform(scrollYProgress, [0.1, 0.3], [0, 100]);
 
   return (
-    <section className="relative min-h-screen">
-      
-      <div className="hero flex flex-col md:flex-row md:justify-center items-center md:gap-30 text-center md:text-justify md:h-screen relative" style={{ zIndex: 2 }}>
+    <section className="hero-container">
+      <div className="hero flex flex-col md:flex-row md:justify-center items-center text-center md:text-justify md:h-screen" style={{ zIndex: 2 }}>
         <motion.div
           className="m-2 p-2 animate__animated animate__bounceInLeft"
           style={{
@@ -28,14 +29,14 @@ const Hero = () => {
           <div className="typewriter max-w-[13.5rem]">
             <h1>Front-end Developer</h1>
           </div>
-          <p>
+          <p className='p-1'>
             An aspiring Front-end Developer from Dasmarinas City, Cavite,
             Philippines.
           </p>
-          <br />
+ 
           <div className="flex flex-col md:flex-row justify-center md:justify-evenly items-center gap-2">
             <Socials />
-            <a href="https://drive.google.com/uc?export=download&id=1dtNiQYuJDUH9kLlo08hVU7P71ksak5qK" download="CV.pdf">
+            <a href="https://drive.google.com/uc?export=download&id=1Eb28Ny0gEdAtTTMMEdVvzQusUMkFDePS" download="James_Guevarra_FrontEndDeveloper_Resume.pdf">
             <button className="bg-blue-900 hover:bg-blue-800 p-2 pl-3 rounded-md text-[12px] flex items-center">
               Download 
               <img src={download} alt="Download" className="w-5 h-5 ml-2" />
@@ -46,7 +47,7 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="my-image animate__animated animate__bounceInRight max-w-[250px] md:max-w-[600px] max-h-[700px] md:max-h-[730px] overflow-hidden"
+          className="my-image animate__animated animate__bounceInRight max-w-[250px] md:max-w-[600px] max-h-[700px] md:max-h-[700px] overflow-hidden object-contain"
           initial={{ opacity: 1, y: 70 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}

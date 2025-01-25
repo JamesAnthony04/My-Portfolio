@@ -4,6 +4,7 @@ import Me from "../assets/me.png";
 import download from "../assets/download-icon.svg";
 import Socials from "./socials-account";
 import backgroundImage from "../assets/background.png";
+import { Analytics } from "@vercel/analytics/react"
 
 
 const Hero = () => {

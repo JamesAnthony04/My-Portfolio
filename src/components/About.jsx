@@ -9,6 +9,7 @@ import others from "../data/others";
 import HR from "./custom-hr";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import aboutlottie from "../assets/about.lottie";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function About() {
   const setOfSkills = skills.map((skill) => (
@@ -114,7 +115,7 @@ export default function About() {
             (NCST), an aspiring front-end developer passionate about creating
             engaging and user-friendly web experiences.
           </p>
-
+          <Analytics/>
           <p className="text-sm md:text-md mb-4">
             I am particularly drawn to the intersection of design and
             functionality, where I can combine my creative instincts with my

@@ -14,6 +14,7 @@ const Hero = () => {
 
   return (
     <section className="hero-container">
+      <Analytics/>
       <div className="hero flex flex-col md:flex-row md:justify-center items-center text-center md:text-justify md:h-screen" style={{ zIndex: 2 }}>
         <motion.div
           className="m-2 p-2 animate__animated animate__bounceInLeft"

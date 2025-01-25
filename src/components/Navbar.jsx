@@ -5,7 +5,7 @@ import educationIcon from "../assets/education-icon.svg";
 import projectIcon from "../assets/project-icon.svg";
 import contactIcon from "../assets/contact-icon.svg";
 import myLogo from "../assets/myLogo.png";
-
+import { Analytics } from "@vercel/analytics/react"
 const Navbar = () => {
   useEffect(() => {
     const navbar = document.getElementById("navbar");
@@ -34,6 +34,7 @@ const Navbar = () => {
         <a href="/" className="flex-shrink-0">
           <img src={myLogo} alt="My Logo" className="w-14 h-12" />
         </a>
+        <Analytics/>
 
         <div className="animate__animated animate__fadeIn">
           <ul className="flex items-center gap-8 lg:gap-20">

@@ -3,6 +3,7 @@ import ncst from "../assets/ncst-logo.png";
 import congre from "../assets/congre.png";
 import spc from "../assets/spc.png";
 import { motion } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react"
 export default function Education() {
   return (
     <section className="py-6 px-5" id="education">
@@ -43,6 +44,7 @@ export default function Education() {
               career in the IT industry.
             </p>
           </li>
+          <Analytics/>
           <li className="mb-10 border-gray-700 border p-4 rounded-md max-w-[1200px]">
           <div className="flex items-center gap-2 pb-4">
             <img src={congre} alt="insta" className="scale-125 transform transition-transform hover:scale-150 cursor-pointer w-8 h-8" />

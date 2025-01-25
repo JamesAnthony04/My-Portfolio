@@ -9,6 +9,7 @@ import Socials from "./socials-account";
 import emailjs from '@emailjs/browser';
 import MessageModal from "./MessageModal";
 import ErrorMessageModal from "./ErrorMessageModal";
+import { Analytics } from "@vercel/analytics/react";
 const Contact = () => {
 
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -70,6 +71,7 @@ const Contact = () => {
               <h2 className="text-2xl font-bold">
                 Get in <span className="text-blue-700">Touch</span>
               </h2>
+              <Analytics />
               <p className="text-sm text-gray-400">
                 I&apos;d love to hear from you! Whether it&apos;s a question, a
                 project idea, or just to say hello, feel free to drop me a

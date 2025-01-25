@@ -2,6 +2,7 @@ import HR from "./custom-hr";
 import { motion } from "framer-motion";
 import Button from "./project-button";
 import projects from "../data/projects";
+import { Analytics } from "@vercel/analytics/react"
 export default function Projects() {
   const sortedProjects = projects.sort((a, b) => b.id - a.id);
 
@@ -66,6 +67,7 @@ export default function Projects() {
       </div>
       </div>
       </div>
+      <Analytics/>
     </section>
   );
 }

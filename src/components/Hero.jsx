@@ -28,7 +28,7 @@ const Hero = () => {
           <span className="font-extrabold text-2xl md:text-7xl text-center">
             James Anthony.
           </span>
-          <div className="typewriter max-w-[16rem] md:max-w-[13.5rem]">
+          <div className="typewriter max-w-[14.5rem] md:max-w-[13.5rem]">
             <h1>Front-end Developer</h1>
           </div>
           <p className='p-1'>
